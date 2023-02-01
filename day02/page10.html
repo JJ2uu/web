@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netfilx 소개</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        div {
+            font-size: 15px;
+            font-weight: bold;
+            color: #fff;
+        }
+        #total {
+            background-color: black;
+            width: 800px;
+            height: 1600px;
+        }
+        #center {
+            padding: 30px;
+            width: 800px;
+            height: 300px;
+            text-align: center;
+        }
+        #top {
+            width: 800px;
+            height: 80px;
+            background: rgb(194, 0, 0);
+            padding: 2px;
+        }
+        #top2 {
+            background-color: black;
+            color: yellow;
+            width: 200px;
+            height: 100px;
+            position: fixed;
+            top: 5px;
+            right: 10px;
+            box-shadow: 10px 10px rgb(78, 0, 0);
+            text-align: center;
+            border: 5px solid red;
+        }
+        li {
+            list-style: none;
+            width: 100px;
+            height: 20px;
+            float: left;
+            text-align: center;
+            padding: 15px;
+        }
+        li:nth-child(2n) {
+            background-color: black;
+        }
+        li:nth-child(2n+1) {
+            background-color: rgb(44, 44, 44);
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        li:first-child {
+            border-radius: 50px 0 0 50px;
+        }
+        li:last-child {
+            border-radius: 0 50px 50px 0;
+        }
+        div > p {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div id="total">
+        <div id="top">
+            <ul>
+                <li>
+                    <a href="page20.html">회원가입</a>
+                </li>
+                <li>
+                    <a href="page10.html">Netflix</a>
+                </li>
+                <li>
+                    <a href="page30.html">더 글로리</a>
+                </li>
+                <li>
+                    <a href="page40.html">Other</a>
+                </li>
+                <li>
+                    <a href="page50.html">고객센터</a>
+                </li>
+            </ul>
+        </div>
+        <div id="top2">
+            퀵바
+        </div>
+        <div id="center">
+            <img src="netflix_logo.png" alt="넷플릭스 로고" width="400px">
+            <p>넷플릭스(영어: Netflix, Inc.)는 '인터넷(Net)'과 '영화(Flicks)'를 합성한 이름으로 <br>
+                전 세계 190개국 이상의, 실제로 4억 명 이상의 고객들이 시청하는 2억 3000만 명의 직접 회원을 보유한<br>스트리밍 엔터테인먼트 기업으로서
+                영화와 드라마, TV 프로그램, 다큐멘터리, 애니메이션 등의<br>매우 다양한 장르의 컨텐츠들을 언제, 어디서나 무제한으로 모든 기기에서 볼 수 있는 플랫폼이다.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

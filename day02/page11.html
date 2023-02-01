@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: blue;
+        }
+
+        h1 {
+            color: skyblue;
+            background-color: black;
+            font-weight: 800;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style:italic
+        }
+
+        a {
+            text-decoration: none;
+            color: blueviolet;
+            background-color: violet;
+            font-size: 100px;
+            font-family: 궁서;
+            font-weight: bold;
+            font-style: italic;
+        }
+        /* id태그 선택자 # */
+        #you {
+            color: lime;
+            font-style: normal;
+        }
+        /* class태그 선택자 . */
+        .we {
+            border-radius: 10px;
+        }
+
+        .we2 {
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- id는 고유번호이기 때문에 겹치면 절대 안됨 -->
+    <h1 class="we2">페이지1</h1>
+    <h1 class="we">페이지2</h1>
+    <h1 id="you" class="we2">페이지3</h1>
+    <a href="page2.html" class="we">Page2</a>
+</body>
+</html>

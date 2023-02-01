@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        div {
+            font-size: 15px;
+            font-weight: bold;
+            color: #fff;
+        }
+        #total {
+            background-color: black;
+            width: 800px;
+            height: 1600px;
+        }
+        #center {
+            padding: 30px;
+            width: 800px;
+            height: 300px;
+        }
+        #top {
+            width: 800px;
+            height: 80px;
+            background: rgb(194, 0, 0);
+            padding: 2px;
+        }
+        #top2 {
+            background-color: black;
+            color: yellow;
+            width: 200px;
+            height: 100px;
+            position: fixed;
+            top: 5px;
+            right: 10px;
+            box-shadow: 10px 10px rgb(78, 0, 0);
+            text-align: center;
+            border: 5px solid red;
+        }
+        li {
+            list-style: none;
+            width: 100px;
+            height: 20px;
+            float: left;
+            text-align: center;
+            padding: 15px;
+        }
+        li:nth-child(2n) {
+            background-color: black;
+        }
+        li:nth-child(2n+1) {
+            background-color: rgb(44, 44, 44);
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        li:first-child {
+            border-radius: 50px 0 0 50px;
+        }
+        li:last-child {
+            border-radius: 0 50px 50px 0;
+        }
+        table {
+            font-weight: normal;
+            padding: 20px;
+        }
+        tr td {
+            padding: 5px;
+        }
+        :root {
+            accent-color: red;
+        }
+        textarea {
+            background-color: rgb(78, 0, 0);
+            border: none;
+        }
+        input {
+            border: none;
+            background-color: rgb(44, 44, 44);
+        }
+        input:focus {
+            outline: none;
+            border-color: red;
+            box-shadow: 0 0 20px red;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="total">
+        <div id="top">
+            <ul>
+                <li>
+                    <a href="page20.html">회원가입</a>
+                </li>
+                <li>
+                    <a href="page10.html">Netflix</a>
+                </li>
+                <li>
+                    <a href="page30.html">더 글로리</a>
+                </li>
+                <li>
+                    <a href="page40.html">Other</a>
+                </li>
+                <li>
+                    <a href="page50.html">고객센터</a>
+                </li>
+            </ul>
+        </div>
+        <div id="top2">
+            퀵바
+        </div>
+        <div id="center">
+            <h3>검색 단어 입력</h3>
+            <form action="보내는 서버 주소">
+                검색어 <input type="text">
+                <button>검색어 전송</button>
+            </form>
+            <hr color="red">
+            <h3>로그인 화면</h3>
+            <form action="보내는 서버 주소">
+                <table>
+                    <tr>
+                        <td>ID</td>
+                        <td><input type="text" class="login"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" class="login"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <button>Login</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <hr color="red">
+            <h3>회원가입 화면</h3>
+            <form action="보내는 서버 주소">
+                <table>
+                    <tr>
+                        <td>ID</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" placeholder="성과 이름을 순서대로 붙여쓰세요."></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>
+                            남<input type="radio" name="gender">
+                            여<input type="radio" name="gender">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Favorite</td>
+                        <td>
+                            <input type="checkbox">코믹
+                            <input type="checkbox">SF/공학
+                            <input type="checkbox">판타지
+                            <input type="checkbox">범죄/스릴러
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>
+                            <select>
+                                <option>SKT</option>
+                                <option>KT</option>
+                                <option>LG U+</option>
+                                <option>알뜰폰</option>
+                            </select>
+                            <input type="number" placeholder=" - 제외">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Birth</td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Today</td>
+                        <td><input type="datetime-local"></td>
+                    </tr>
+                    <tr>
+                        <td>Week</td>
+                        <td><input type="week"></td>
+                    </tr>
+                    <tr>
+                        <td>하고 싶은 말</td>
+                        <td><textarea cols="30" rows="10"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <button>회원가입</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

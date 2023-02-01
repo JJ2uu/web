@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더 글로리</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        div {
+            font-size: 15px;
+            font-weight: bold;
+            color: #fff;
+        }
+        #total {
+            background-color: black;
+            width: 800px;
+            height: 1600px;
+        }
+        #center {
+            padding: 30px;
+            width: 800px;
+            height: 300px;
+        }
+        #top {
+            width: 800px;
+            height: 80px;
+            background: rgb(194, 0, 0);
+            padding: 2px;
+        }
+        #top2 {
+            background-color: black;
+            color: yellow;
+            width: 200px;
+            height: 100px;
+            position: fixed;
+            top: 5px;
+            right: 10px;
+            box-shadow: 10px 10px rgb(78, 0, 0);
+            text-align: center;
+            border: 5px solid red;
+        }
+        li {
+            list-style: none;
+            width: 100px;
+            height: 20px;
+            float: left;
+            text-align: center;
+            padding: 15px;
+        }
+        li:nth-child(2n) {
+            background-color: black;
+        }
+        li:nth-child(2n+1) {
+            background-color: rgb(44, 44, 44);
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        li:first-child {
+            border-radius: 50px 0 0 50px;
+        }
+        li:last-child {
+            border-radius: 0 50px 50px 0;
+        }
+        td {
+            text-align: center;
+        }
+        table {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-collapse : collapse;
+            border-color:rgb(44, 44, 44);
+        }
+        p {
+            font-weight: normal;
+            color: rgb(163, 163, 163);
+        }
+    </style>
+</head>
+<body>
+    <div id="total">
+        <div id="top">
+            <ul>
+                <li>
+                    <a href="page20.html">회원가입</a>
+                </li>
+                <li>
+                    <a href="page10.html">Netflix</a>
+                </li>
+                <li>
+                    <a href="page30.html">더 글로리</a>
+                </li>
+                <li>
+                    <a href="page40.html">Other</a>
+                </li>
+                <li>
+                    <a href="page50.html">고객센터</a>
+                </li>
+            </ul>
+        </div>
+        <div id="top2">
+            퀵바
+        </div>
+        <div id="center">
+            <table border="1" frame="void">
+                <tr>
+                    <td>
+                        <h1>더 글로리</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img7.jpg" alt="더 글로리 포스터" width="200px">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>
+                            우리 같이 천천히 말라 죽어보자
+                        </h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>유년 시절 폭력으로 영혼까지 부서진 한 여자가 온 생을 걸어<br>
+                        치밀하게 준비한 처절한 복수와 그 소용돌이에 빠져드는 이들의 이야기</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/WciUBaAvbGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
