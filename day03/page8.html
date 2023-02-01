@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log ("1. 사각형 면적 구하기")
+        width = prompt("사각형의 가로값을 입력하세요.")
+        height = prompt("사각형의 세로값을 입력하세요.")
+        result = parseFloat(width) * parseFloat(height)
+        console.log ("사각형의 면적은 " + result.toFixed(1) + "입니다.")
+
+        console.log ("2. 커피 결제 금액은?")
+        coffee = 4500
+        coffeecount = 5
+        result2 = coffee * coffeecount
+        console.log ("전체 결제금액은 " + result2 + "원입니다.")
+
+        console.log ("3.사과와 배 결제 금액은?")
+        apple = 2000
+        pear = 3000
+        applecount = prompt("사과 구매 개수를 입력하세요.")
+        pearcount = prompt("배 구매 개수를 입력하세요.")
+        result3 = apple * parseInt(applecount) + pear * parseInt(pearcount)
+        console.log ("전체 결제 금액은 " + result3 + "원입니다.")
+
+        // 언더바(파이썬용)를 사용하지 않고 연결부분을 대문자로 표기(카멜표기법)
+
+        // 변경 불가능한 값을 넣을 때
+        // const PRICE2 = 2000
+        // const PRICE3 = 3000
+        // apple = 3
+        // pear = 2
+        // appleTotal = apple * PRICE2
+        // pearTotal = pear * PRICE3
+        // console.log = ("전체 결제 금액은 " + (appleTotal + pearTotal)) 먼저 계산해야 할 부분은 괄호처리
+
+        // 내용이 많아질 경우엔 따로 객체가 필요
+        console.log("4.어제와 오늘 온도의 평균 온도는?")
+        yesTemp = prompt("어제 날씨 온도")
+        todayTemp = prompt("오늘 날씨 온도")
+        result4 = parseInt(yesTemp) + parseInt(todayTemp)
+        result5 = result1/2
+        console.log ("어제와 오늘 온도의 평균 온도는 " + result5 + "입니다.")
+
+        // yesTemp = prompt ("어제 날씨 온도")
+        // todayTemp = prompt ("오늘 날씨 온도")
+        // const COUNT = 2
+        // console.log ("어제와 오늘 온도의 평균 온도는" + (parseInt(yesTemp) + parseInt(todayTemp)) / COUNT)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
