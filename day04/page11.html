@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function login() {
+            id = "root"
+            pw = "1234"
+            id2 = document.getElementById("id2").value
+            pw2 = document.getElementById("pw2").value
+            pw3 = parseInt(pw2)
+            result = document.getElementById("result")
+
+            if (id == id2 && pw == pw3) {
+                result.innerHTML = "<font color=green>로그인 성공!</font>"
+            } else {
+                result.innerHTML ="<font color=red>아이디나 비밀번호가 잘못되었습니다. 다시 확인하세요.</font>"
+            }
+        }
+    </script>
+    <style>
+        #id2, #pw2 {
+            width: 300px;
+            height: 50px;
+            margin-bottom: 5px;
+            border-radius: 10px;
+            border-color: rgb(192, 192, 192);
+            outline-color:rgb(10, 185, 10);
+        }
+        #holding {
+            accent-color: rgb(4, 110, 4);
+            border-color:rgb(4, 110, 4);
+            color: #fff;
+        }
+        #login {
+            width: 300px;
+            height: 50px;
+            border: none;
+            background-color: rgb(10, 185, 10);
+            color: #fff;
+        }
+        #login:hover {
+            background-color: rgb(4, 110, 4);
+            transition: 0.2s;
+        }
+        h1 {
+            color:rgb(10, 185, 10);
+        }
+        .idpw {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="idpw">
+        <h2>로그인 화면 실습해보기</h2>
+        <hr>
+        <h1>NAVER</h1>
+        <input type="text" placeholder="아이디를 입력하세요." id="id2"><br>
+        <input type="password" placeholder="비밀번호를 입력하세요." id="pw2"> <br>
+        <div class="holding"><input type="checkbox" id="holding">로그인 상태유지</div> <br>
+        <button id="login" onclick="login()">Login</button>
+        <div id="result"></div>
+    </div>
+    
+</body>
+</html>
