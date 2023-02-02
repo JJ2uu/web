@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 입력 : 태어난 연도
+        birthYear = prompt ("태어난 연도를 입력하세요.") // 입력값을 cpu가 birthYear(ram저장공간)에 넣는다.
+        thisYear = prompt ("올해 연도를 입력하세요.") // thisYear = 2023
+
+        // 2. 처리 : 연도로 나이 계산
+        result = parseInt(thisYear) - parseInt(birthYear)
+       
+        // 3. 출력 : 저의 나이는 100세입니다. 출력
+        // 3-1. cpu가 "저의 나이는 " 과
+        //      램 result 변수에 저장된 값을 가지고 와서 결합
+        // 3-2. 결합한 문자들을 console.log를 실행하면서 넣어줌.
+        console.log ("저의 나이는 " + result + "세입니다.")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
