@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        text-align: center;
+    }
+    input {
+        width: 200px;
+        height: 40px;
+        border-radius: 5px;
+        border-color: rgb(156, 156, 156);
+        color: gray;
+        margin-top: 10px;
+    }
+    button {
+        width: 200px;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+        background-color: blueviolet;
+        color: #fff;
+    }
+    </style>
+    <script>
+        function go() {
+            favorite2 = document.getElementById("favorite").value
+            see2 = document.getElementById("see").value
+            promise2 = document.getElementById("promise").value
+
+            if (favorite2="네" && see2 == "네" && promise2 == "네") {
+                location.href = "gallery.html"
+            } else {
+                next.innerHTML = "<font color=red>모든 항목에 동의하셔야 만나실 수 있습니다.</font>"
+            }
+        }
+    </script>
+</head>
+<body>
+    <h4>가을이랑 만나기 전</h4>
+    <h1>설문조사</h1>
+    <hr>
+    <br>
+    1. 당신은 강아지를 좋아합니까?<br>
+    <input type="text" placeholder="'네, 아니오' 로만 대답해주세요." id="favorite"><br><br>
+    2. 당신은 가을이가 보고싶습니까?<br>
+    <input type="text" placeholder="'네, 아니오' 로만 대답해주세요." id="see"><br><br>
+    3. 당신은 가을이에게 해를 가하지 않겠다고 다짐할 수 있습니까?<br>
+    <input type="text" placeholder="'네, 아니오' 로만 대답해주세요." id="promise"><br><br>
+    <button onclick="go()">가을이 만나러가기</button>
+    <hr>
+    <div id="next"></div>
+</body>
+</html>

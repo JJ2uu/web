@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homecss.css">
+    <script>
+        function join() {
+            id = "cuteautumn"
+            pw = 1004
+            id2 = document.getElementById("id").value
+            pw2 = document.getElementById("pw").value
+            pw3 = parseInt(pw2)
+
+            if (id2 == id && pw3 == pw) {
+                location.href = "reserch.html"
+            } else {
+                result1.innerHTML = "아이디와 비밀번호를 확인하세요."
+            }
+        }
+    </script>
+</head>
+<body>
+    <table id="home">
+        <tr>
+            <td>
+            <h1>귀여운 가을이<br>만나러 가기</h1>
+            <table class="login">
+                <tr>
+                    <td>ID</td>
+                    <td><input type="text" value="cuteautumn" id="id">
+                </tr>
+                <tr>
+                    <td>PW</td>
+                    <td><input type="text" value="1004" id="pw">
+                </tr>
+            </table>
+            <button id="login" onclick="join()">만나러 가기</button>
+            </td>
+            <td>
+            <img src="img1.jpg" alt="가을이 사진" width="200px" height="100%" class="image">
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <div id="result1"></div>
+</body>
+</html>

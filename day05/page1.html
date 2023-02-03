@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function purchase() {
+            shop2 = document.getElementById("shop").value
+            price2 = document.getElementById("price").value
+            pay2 = document.getElementById("pay").value
+            price3 = parseInt(price2)
+
+            if (pay2 == 2) {
+                price3 = price3 + 1000 // 변수(저장공간)없이 price3 + 1000만 입력하면 cpu가 계산한 값이 공중분해된다.
+            } else if (pay2 == 3) {
+                price3 = price3 + 500
+            } else {
+
+            }
+            result = document.getElementById("result")
+            result.innerHTML = shop2 + "에서 <font color=red> " + price3 + "</font>원을 결제수단 " + pay2 + "번으로 결제했습니다."
+                                            // 색상을 바꾸고 싶다면 " " <안에 넣어줘야 한다.
+        }
+
+        function finish() {
+            space2 = document.getElementById("space").value
+            month2 = document.getElementById("month").value
+            choice2 = document.getElementById("choice").value
+
+            let method = ""
+            let money = 0
+
+            if (choice2 == "1") {
+                method = "비행기"
+                money = 30000
+            } else if (choice2 == "2") {
+                method = "버스"
+                money = 10000
+            } else {
+                method = "자가용"
+                money = 50000
+            }
+
+            text = "나는 " + month2 + "월에 " +
+                    space2 + "으로 " +
+                    method + "를 타고 여행을 갈거에요. 비용은 " +
+                    money + "원"
+
+            result3 = document.getElementById("result2")
+            result3.innerHTML = text
+        }
+
+        // function ottSelect() {
+        //     drama2 = document.getElementById("drama").value
+        //     time2 = document.getElementById("time").value
+        //     choice_ott = document.getElementById("ott").value
+        //     net2 = document.option[choice_ott.seletedIndex].value
+        //     you2 = document.option[choice_ott.seletedIndex].value
+        //     tvn2 = document.option[choice_ott.seletedIndex].value
+        //     let ott2 = ""
+
+        //     if (choice_ott == net2) {
+        //         ott2 = "Netflix"
+        //     } else if (choice_ott == you2) {
+        //         ott2 = "Youtube"
+        //     } else {
+        //         ott2 = "tvn"
+        //     }
+
+        //     text = "나는 " + drama2 + "를" + time2 + "동안" + ott2 + "로 보고싶어."
+        //     result5 = document.getElementById("result4").value
+        //     result5.innerHTML = text
+        // }
+    </script>
+</head>
+<body>
+    <hr color="red">
+    구매상점 : <input type="text" value="더조은샵" id="shop"> <br>
+    결제금액 : <input type="text" value="10000" id="price"> <br>
+    결제수단 (1)계좌이체  (2)신용카드 (3)휴대폰결제 <br>
+    <input type="text" value="1" id="pay">
+    <button onclick="purchase()">결제버튼</button>
+    <hr color="blue">
+    <div id="result"></div>
+    <br>
+    <hr>
+    <br>
+    여행가고 싶은 곳 : <input type="text" value="부산" id="space"><br>
+    몇월에 갈까요? : <input type="text" value="7" id="month"><br>
+    교통수단 (1)비행기 (2)버스 (3)자가용 <br>
+    <input type="text" value="1" id="choice"> <br>
+    <button onclick="finish()">여행계획완료</button>
+    <hr>
+    <div id="result2"></div>
+    <!-- <hr>
+    내가 보고싶은 영상 : <input type="text" value="더 글로리" id="drama"> <br>
+    얼마나 볼까? : <input type="text" value="2시간" id="time"> <br>
+    어디서 볼까? <select onchange="ottSelect()" id="ott">
+                    <option value="net">Netflix</option>
+                    <option value="you">Youtube</option>
+                    <option value="tvn">tvn</option>
+                </select>
+    <hr>
+    <div id="result4">
+    </div> -->
+</body>
+</html>
