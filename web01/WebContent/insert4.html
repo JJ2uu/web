@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- script -->
+<!-- <script type="text/javascript">
+	alert('게시판 작성 페이지입니다. 반갑습니다.')
+</script> -->
+
+<!-- css -->
+<style type="text/css">
+	body {
+		background: #5cc4ed;
+	}
+	#b1 {
+		background: #028abf;
+		color: #fff;
+		border-radius: 5px;
+		border-style: none;
+	}
+	#b2 {
+		background: #000;
+		color: #fff;
+		border-radius: 5px;
+		border-style: none;
+	}
+	.t1 {
+		background: #fff;
+		width: 150px;
+		text-align: center;
+	}
+</style>
+
+</head>
+<body>
+	<h3>영화 페이지</h3>
+	<a href = "index.html">
+		<button id = "b1">첫 페이지로</button>
+	</a>
+	<hr>
+	
+	<!-- 테이블 input에 작성한 내용을 Tomcat한테 보냄 -->
+	<form action="insert4.jsp"> 
+		<table border="1">
+			<tr>
+				<td class = "t1">ID</td>
+				<td>
+					<input name = "id">
+				</td>
+			</tr>
+			<tr>
+				<td class = "t1">영화제목</td>
+				<td>
+					<input name = "title">
+				</td>
+			</tr>
+			<tr>
+				<td class = "t1">내용</td>
+				<td>
+					<input name = "content">
+				</td>
+			</tr>
+			<tr>
+				<td class = "t1">장소</td>
+				<td>
+					<input name = "location">
+				</td>
+			</tr>
+			<tr>
+				<td class = "t1">감독</td>
+				<td>
+					<input name = "director">
+				</td>
+			</tr>
+			<tr>
+				<td colspan = "2" class = "t1">
+					<button id = "b2">영화등록 데이터 전송</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- script -->
+<!-- <script type="text/javascript">
+	alert('게시판 작성 페이지입니다. 반갑습니다.')
+</script> -->
+
+<!-- css -->
+<style type="text/css">
+	body {
+		background: #5cc4ed;
+	}
+	#b1 {
+		background: #028abf;
+		color: #fff;
+		border-radius: 5px;
+		border-style: none;
+	}
+	#b2 {
+		background: #000;
+		color: #fff;
+		border-radius: 5px;
+		border-style: none;
+	}
+	.t1 {
+		background: #fff;
+		width: 150px;
+		text-align: center;
+	}
+</style>
+
+</head>
+<body>
+	<h3>상품등록 페이지</h3>
+	<a href = "product.html">
+		<button id = "b1">첫 페이지로</button>
+	</a>
+	<hr>
+	
+	<!-- 테이블 input에 작성한 내용을 Tomcat한테 보냄 -->
+	<form action="insert3.jsp"> 
+		<table border="1">
+			<tr>
+				<td class = "t1">ID</td>
+				<td>
+					<input name = "id">
+				</td>
+			</tr>
+			<tr>
+				<td class = "t1">상품명</td>
+				<td>
+					<input name = "name">
+				</td>
+			</tr>
+			<tr>
+				<td class = "t1">상품 종류</td>
+				<td>
+					<input name = "content">
+				</td>
+			</tr>
+			<tr>
+				<td class = "t1">가격</td>
+				<td>
+					<input name = "price" type="number">
+				</td>
+			</tr>
+			<tr>
+				<td class = "t1">제조사</td>
+				<td>
+					<input name = "company">
+				</td>
+			</tr>
+			<tr>
+				<td class = "t1">상품이미지</td>
+				<td>
+					<input name = "img" type = "file">
+				</td>
+			</tr>
+			<tr>
+				<td colspan = "2" class = "t1">
+					<button id = "b2">상품등록 데이터 전송</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

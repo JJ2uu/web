@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- script -->
+<!-- <script type="text/javascript">
+	alert('회원가입 페이지입니다. 반갑습니다.')
+</script> -->
+
+<!-- css -->
+<style type="text/css">
+	body {
+		background: #5cc4ed;
+	}
+	#b1 {
+		background: #028abf;
+		color: #fff;
+		border-radius: 5px;
+		border-style: none;
+	}
+	#b2 {
+		background: #000;
+		color: #fff;
+		border-radius: 5px;
+		border-style: none;
+	}
+	.t1 {
+		background: #fff;
+		width: 150px;
+		text-align: center;
+	}
+</style>
+
+</head>
+<body>
+	<!-- 테이블 input에 작성한 내용을 Tomcat한테 보냄 -->
+	<h2>회원검색 페이지</h2>
+	<hr>
+	<!-- a태그는 무조건 get방식 -->
+	<a href = "http://localhost:8888/web01/one.jsp?id=apple">
+		<button>apple</button>
+	</a>
+	<a href = "http://localhost:8888/web01/one.jsp?id=winter">
+		<button>winter</button>
+	</a>
+	<hr>
+	<form action="one.jsp" method = "get"> 
+		<table border="1">
+			<tr>
+				<td class = "t1">검색할 아이디</td>
+				<td>
+					<input name = "id">
+				</td>
+			</tr>
+			<tr>
+				<td colspan = "2" class = "t1">
+					<button id = "b2">검색할 아이디 데이터 전송</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
