@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>음악 대백과사전</title>
+
+<!-- script -->
+<!-- <script type="text/javascript">
+	alert('게시판 작성 페이지입니다. 반갑습니다.')
+</script> -->
+
+<!-- css -->
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+<style type="text/css">
+
+	body {
+		position: relative;
+		font-family: 'Gowun Dodum', sans-serif;
+	}
+	.main {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		display: block;
+		margin-top: 12%;
+	}
+	.header {
+		text-align: center;
+	}
+	.content {
+		text-align: center;
+	}
+	table {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.t1 {
+		text-align: left;
+		padding-right: 30px;
+	}
+	input {
+		width: 200px;
+		height: 30px;
+		padding-bottom: 5px;
+	}
+	.input {
+		font-size: 16px;
+	}
+	button {
+		width: 200px;
+		height: 50px;
+		background: blue;
+		color: #fff;
+		border-color: transparent;
+	}
+</style>
+
+</head>
+<body>
+<div class = "main">
+	<div class = "header">
+		<h3>백과사전 등록</h3>
+		<hr width="50%">
+	</div>
+	
+	<div class = "content">
+		<form action="song_insert.jsp"> 
+			<table>
+				<tr>
+					<td class = "t1">노래제목</td>
+					<td>
+						<input name = "title" class = "input">
+					</td>
+				</tr>
+				<tr>
+					<td class = "t1">가수</td>
+					<td>
+						<input name = "artist" class = "input">
+					</td>
+				</tr>
+				<tr>
+					<td class = "t1">앨범 자켓 사진</td>
+					<td>
+						<input name = "img" type = "file">
+					</td>
+				</tr>
+				<tr>
+					<td colspan = "2">
+						<button id = "b2">앨범 등록</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
+</body>
+</html>
