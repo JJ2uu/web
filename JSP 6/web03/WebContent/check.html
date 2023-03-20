@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action = "check.do">
+<h3>오늘의 날씨는?</h3>
+	<select name = "today">
+		<option value = "맑음">맑음</option>
+		<option value = "흐림">흐림</option>
+		<option value = "비">비</option>
+	</select>
+	<button>오늘 날씨 서버로 전송</button>
+</form>
+<hr>
+<h3>암호는?</h3>
+<form action="check.do" method="post">
+	오늘의 출입문 암호를 입력하세요.
+	<input name = "pass" value = "나는 퀸이다.">
+	<button>암호 서버로 전송</button>
+</form>
+</body>
+</html>
