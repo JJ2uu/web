@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function login() {
+		id = document.getElementById("userId").value
+		pw = document.getElementById("userPw").value
+		
+		resultTag = document.getElementById("result")
+		if (id == 'root' && pw == '1234') {
+			resultTag.innerHTML = '<img src=img/yes.jpg width=200>'
+		} else {
+			resultTag.innerHTML= '로그인 실패'
+		}
+	}
+	
+	function age() {
+		age1 = document.getElementById("age").value
+		
+		now = new Date();
+		year = now.getFullYear();
+		
+		nowAge = year - age1
+		
+		resultTag = document.getElementById("result")
+		resultTag.innerHTML = '현재 나이는>>' + nowAge
+	}
+	
+	function rec() {
+		w = document.getElementById("w").value
+		h = document.getElementById("h").value
+		
+		w2 = parseFloat(w)
+		h2 = parseFloat(h)
+		
+		rec1 = w2 * h2
+		resultTag = document.getElementById("result")
+		
+		resultTag.innerHTML = '사각형의 넓이는>> ' + rec1
+	}
+</script>
+</head>
+<body>
+아이디: <input id = "userId" value = "root"> <br>
+패스워드 : <input id = "userPw" value = "1234"> <br>
+<button onclick="login()">로그인</button>
+<hr>
+나이 계산: <input id = 'age'> <br>
+<button onclick = "age()">나이 계산하기</button>
+<hr>
+가로길이: <input id = "w"> <br>
+세로길이 : <input id = "h"> <br>
+<button onclick="rec()">면적 구하기</button>
+
+<hr>
+
+<div id ="result" style = "color: red; background: yellow; width: 500px; height: 50px; font-size: 30px;">
+	결과넣는 곳.
+</div>
+</body>
+</html>

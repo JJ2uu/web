@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function me() {
+		id = document.getElementById("id").value
+		company = document.getElementById("company").value
+		position = document.getElementById("position").value
+		gender = document.getElementById("gender").value
+		
+		resultTag = document.getElementById("result")
+		resultTag2 = document.getElementById("resultImage")
+	
+		resultTag.innerHTML = company + "회사에 " + position + "으로(로) 있는 " + id + "입니다."
+		
+		
+		if (gender == '남자') {
+			resultTag2.innerHTML = '<img src = "img/man.png">'
+		} else {
+			resultTag2.innerHTML = '<img src = "img/woman.png">'
+		}
+	}
+	
+	function bag() {
+		first = document.getElementById("first").value
+		
+		resultTag3 = document.getElementById("result2")
+		
+		if (first == '휴대폰') {
+			resultTag3.innerHTML = '<img src = "img/phone.jpg" alt = "휴대폰 사진">'
+		} else if (first == '시계') {
+			resultTag3.innerHTML = '<img src = "img/clock.jpg" alt = "시계 사진">'
+		} else {
+			resultTag3.innerHTML = '<img src = "img/other.jpg" alt = "아무거나 사진">'
+		}
+	}
+
+	function bag2() {
+		second = document.getElementById("second").value
+		
+		resultTag4 = document.getElementById("result2")
+		
+		if (second == '시계') {
+			location.href = "https://www.rolex.com/ko"
+		} else if (second == '가방') {
+			location.href = "https://www.chanel.com/kr/"
+		} else {
+			location.href = "https://www.naver.com"
+		}
+	}
+</script>
+</head>
+<body>
+	이름: <input id = "id"> <br>
+	회사명: <input id = "company"> <br>
+	직책: <input id = "position"> <br>
+	성별: <input id = "gender">
+	<button onclick = "me()">확인</button>
+	<hr>
+	<div id = "result" style = "width: 500px;"></div>
+	<div id = "resultImage"></div>
+	<hr>
+	
+	가방안에 들어있는 물건 중 제일 중요한 것: <input id = "first" value = "휴대폰"> <br>
+	가방안에 들어있는 물건 중 두번째로 중요한 것: <input id = "second" value = "시계"> <br>
+	<button onclick = "bag()">제일 중요한것 확인</button>
+	<button onclick = "bag2()">두번째로 중요한것 확인</button>
+	<hr>
+	<div id = "result2" style = "width: 500px;"></div>
+		
+	
+</body>
+</html>
