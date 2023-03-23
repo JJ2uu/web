@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src = "js/jquery-3.6.4.js"></script>
+<script type="text/javascript">
+	
+	$(function() {
+		$("#text").click(function() {
+			c = $("#co").val()
+			divTag = $("#result")
+			divTag.append(c + "<br>")
+		})
+		
+		$("#cookie").click(function() {
+			divTag = $("#result")
+			divTag.append('<img src ="img/cookie.png width = 50px" ><br>')
+		})
+		
+		$("#coment").click(function() {
+			c = $("#co").val()
+			divTag = $("#result")
+			divTag.append('<img src ="img/cookie.png" width = 50px>' + c + "<br>")
+		})
+	})
+	
+</script>
+</head>
+<body>
+	입력내용: <input id = "co">
+	<button id = "text">글자 추가</button>
+	<button id = "cookie">쿠키 추가</button>
+	<button id = "coment">댓글 추가</button>
+	<div id = "result"></div>
+</body>
+</html>

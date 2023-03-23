@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src = "js/jquery-3.6.4.js"></script>
+<script>
+	$(function() {
+		$("#b2").click(function() {
+			$.ajax({
+				url: "idCheck.jsp",
+				data: {
+					id : $("#id").val()
+				},
+				success: function(res) {
+					//alert(res)
+					$("#result1").html('<font color = red>' + res + '</font>')
+				},
+				error: function(e) {
+					
+				} // error
+			}) // ajax
+		}) // b2
+		
+		$("#b1").click(function() {
+			
+			$.ajax({
+				url: "money.jsp",
+				data: {
+					money: $("#money").val(),
+					choice : $("#choice").val()
+				},
+				success: function(res) {
+					$("#result2").html('결제 금액 : ' + '<font color = red>' + res + '</font>')
+				},
+				error: function(e) {
+					
+				}
+			})
+		})
+		
+		$("#b3").click(function() {
+			$.ajax({
+				url: "tel.jsp", 
+				data : {
+					tel : $('#tel').val()
+				},
+				success : function(x) {
+					$('#result3').html("<font color=red>인증번호는 " + x + "</font>")
+				}, 
+				error : function(e) {
+					
+				} //error
+			})//ajax
+		})
+	}) // $
+</script>
+<style>
+	body {
+		background: #f0f0f0;
+	}
+	input {
+		width: 120px;
+		height: 30px;
+		border-radius: 5px;
+		border-color: transparent;
+	}
+	button {
+		width: 100px;
+		height: 30px;
+		border-color: transparent;
+		border-radius: 10px;
+		padding: 0;
+		text-align: center;
+		background: #980ee8;
+		color: #fff;
+	}
+	button:hover {
+		background: #4c0973;
+		width: 102px;
+		height: 32px;
+	}
+	.pay {
+		margin: 5px;
+	}
+	#choice{
+	    width: 120px;
+	    border: 1px solid #C4C4C4;
+	    box-sizing: border-box;
+	    border-radius: 10px;
+	    padding: 12px 13px;
+	    font-style: normal;
+	    font-weight: 400;
+	    font-size: 14px;
+	    line-height: 16px;
+	}
+</style>
+</head>
+<body>
+	<select id = "choice">
+		<option value = "1">계좌이체</option>
+		<option value = "2">신용카드</option>
+		<option value = "3">휴대폰결제</option>
+	</select>
+	<div class = "pay">
+	결제금액: <input id = "money" value = "1000">
+	<button id = "b1">결제하기</button>
+	<div id = "result2"></div>
+	</div>
+	<hr>
+	아이디: <input id = "id" value = "root">
+	<button id = "b2">중복체크</button>
+	<div id = "result1"></div>
+	<hr>
+	전화번호: <input id = "tel" value = "01012345678">
+	<button id = "b3">인증번호 받기</button>
+	<div id = "result3"></div>
+	<hr>
+</body>
+</html>

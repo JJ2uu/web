@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src ="js/jquery-3.6.4.js"></script>
+<script type="text/javascript">
+	
+	$(function() {
+		$("#KRW_D").click(function() {
+			$.ajax({
+				url: "won.jsp",
+				data: {
+					k : $("#KRW").val()
+				},
+				success: function(res) {
+					$("#result").html('원화를 달러로 >> ' + res + '$')
+				}
+			})
+		})
+		
+		$("#Dollar_K").click(function() {
+			$.ajax({
+				url: "dollar.jsp",
+				data: {
+					d : $("#Dollar").val()
+				},
+				success: function(res) {
+					$("#result").html('달러를 원화로 >> ' + res + '원')
+				}
+			})
+		})
+	})
+	
+</script>
+</head>
+<body>
+<h1>비동기 통신으로 서버와 통신하기</h1>
+원화를 달러로: <input id = "KRW" value = 20000>
+<button id = "KRW_D">원화를 달러로</button>
+<hr>
+달러를 원화로: <input id = "Dollar" value = 5>
+<button id = "Dollar_K">달러를 원화로</button>
+<hr>
+<div id = "result"></div>
+</body>
+</html>

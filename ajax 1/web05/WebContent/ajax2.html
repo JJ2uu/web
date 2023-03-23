@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src = "js/jquery-3.6.4.js"></script>
+<script>
+	$(function() {
+		$("#b1").click(function() {
+			$.ajax({
+				url: "ok.html",
+				success: function(x) { // ok.html의 데이터를 x에 임시저장
+					$("#result").append(x + "<br>")
+				} //success
+			}) // ajax
+		}) // b1
+		
+		$("#b2").click(function() {
+			$.ajax({
+				url: "tour.html",
+				success: function(y) {
+					$("#result").append(y + "<br>")
+				}
+			})
+		})
+		
+		$("#b3").click(function() {
+			$.ajax({
+				url: "weather.html",
+				success: function(z) {
+					$("#result").append(z + "<br>")
+				}
+			})
+		})
+	}) // $
+</script>
+</head>
+<body>
+<button id ="b1">OK사이트 연결</button>
+<button id ="b2">Tour사이트 연결</button>
+<button id ="b3">Weather사이트 연결</button>
+<hr>
+<div id = "result"></div>
+</body>
+</html>
