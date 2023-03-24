@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src ="js/jquery-3.6.4.js"></script>
+<script type="text/javascript">
+	
+	$(function() {
+		$("#b1").click(function() {
+			$.ajax({
+				url: "data/dataset3.xml",
+				success: function(doc) {
+					list = $(doc).find("record")
+					for (var i = 0; i < list.length; i++) {
+						name = $(list[i]).find("owner_first_name").text()
+						make = $(list[i]).find("car_make").text()
+						model = $(list[i]).find("car_model").text()
+						model_year = $(list[i]).find("car_model_year").text()
+						vin = $(list[i]).find("car_vin").text()
+						color = $(list[i]).find("car_color").text()
+						
+						$("#result").append(
+								'차주: ' + name + '<br>' +
+								'제조사: ' + make + '<br>' +
+								'모델명: ' + model + '<br>' +
+								'출시년도: ' + model_year + '<br>' +
+								'차대번호: ' + vin + '<br>' +
+								'차량색깔: ' + color + '<br>' +
+								'<hr>'
+								)
+						
+						$.ajax({
+							url: "car.jsp",
+							data: {
+								owner_first_name : name,
+								car_make : make,
+								car_model : model,
+								car_model_year : model_year,
+								car_vin : vin,
+								car_color : color
+							},
+							success: (function() {
+								console.log('DB에 데이터 저장 완료')
+							})
+						})
+					}
+				}
+			})
+		})
+	})
+	
+</script>
+</head>
+<body>
+<button id = "b1">자동차 정보</button>
+<hr>
+<div id = "result"></div>
+</body>
+</html>

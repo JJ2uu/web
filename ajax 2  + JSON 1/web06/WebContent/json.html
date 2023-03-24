@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src ="js/jquery-3.6.4.js"></script>
+<script type="text/javascript">
+	
+	$(function() {
+		$("#b1").click(function() {
+			$("#result").empty() // 기존 result 내용 다 지워라
+			$.ajax({
+				url: "data/rank.json",
+				success: function(doc) {
+					list = doc.rank
+					alert(list.length)
+					for (var i = 0; i < list.length; i++) {
+						n = list[i].name
+						t = list[i].tel
+						$("#result").append(n + ", " + t + "<br>")
+					}
+				}
+			})
+		})
+		
+		$("#b2").click(function() {
+			$("#result").empty()
+			$.ajax({
+				url: "data/MOCK_DATA.json",
+				success: function(doc) {
+					list = doc
+					alert(list.length)
+					for (var i = 0; i < list.length; i++) {
+						id = list[i].id
+						email = list[i].email
+						$("#result").append(id + ", " + email + "<br>")
+					}
+				}
+			})
+		})
+		
+		$("#b3").click(function() {
+			$("#result").empty()
+			$.ajax({
+				url: "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frss.hankyung.com%2Ffeed%2Fhei.xml&api_key=ci8dphxuvvi5jdkonyrrebbi4ablwjeqvvaqo7xb",
+				success: function(doc) {
+					alert('성공' + doc)
+					list = doc.items
+					alert(list.length)
+					for (var i = 0; i < list.length; i++) {
+						// console.log(list[i].title)
+						t = list[i].title
+						l = list[i].link
+						p = list[i].pubDate
+						a = list[i].author
+						
+						$("#result").append(
+								"<a href= " + l + ">" + t + "</a>" +  ", " +
+								p + ", " + "<br>" +
+								l + ", " +
+								a + "<hr>"
+								)
+					}
+				}
+			})
+		})
+		
+		$("#b4").click(function() {
+			$("#result").empty()
+			$.ajax({
+				url: "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frss.hankyung.com%2Ffeed%2Fit.xml&api_key=ci8dphxuvvi5jdkonyrrebbi4ablwjeqvvaqo7xb",
+				success: function(doc) {
+					alert('성공' + doc)
+					list = doc.items
+					alert(list.length)
+					for (var i = 0; i < list.length; i++) {
+						// console.log(list[i].title)
+						t = list[i].title
+						l = list[i].link
+						p = list[i].pubDate
+						a = list[i].author
+						
+						$("#result").append(
+								"<a href= " + l + ">" + t + "</a>" +  ", " +
+								p + ", " + "<br>" +
+								l + ", " +
+								a + "<hr>"
+								)
+					}
+				}
+			})
+		})
+		
+		$("#b5").click(function() {
+			$("#result").empty()
+			$.ajax({
+				url: "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frss.hankyung.com%2Ffeed%2Fland.xml&api_key=ci8dphxuvvi5jdkonyrrebbi4ablwjeqvvaqo7xb",
+				success: function(doc) {
+					alert('성공' + doc)
+					list = doc.items
+					alert(list.length)
+					for (var i = 0; i < list.length; i++) {
+						// console.log(list[i].title)
+						t = list[i].title
+						l = list[i].link
+						p = list[i].pubDate
+						a = list[i].author
+						
+						$("#result").append(
+								"<a href= " + l + ">" + t + "</a>" +  ", " +
+								p + ", " + "<br>" +
+								l + ", " +
+								a + "<hr>"
+								)
+					}
+				}
+			})
+		})
+		
+		$("#b6").click(function() {
+			$("#result").empty()
+			$.ajax({
+				url: "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnews.sbs.co.kr%2Fnews%2FSectionRssFeed.do%3FsectionId%3D14%26plink%3DRSSREADER&api_key=ci8dphxuvvi5jdkonyrrebbi4ablwjeqvvaqo7xb",
+				success: function(doc) {
+					alert('성공' + doc)
+					list = doc.items
+					alert(list.length)
+					for (var i = 0; i < list.length; i++) {
+						// console.log(list[i].title)
+						t = list[i].title
+						l = list[i].link
+						p = list[i].pubDate
+						a = list[i].author
+						img = list[i].thumbnail
+						
+						$("#result").append(
+								"<img src=" + img + " width = 100> " + "<br>" +
+								"<a href= " + l + ">" + t + "</a>" +  ", " +
+								p + ", " + "<br>" +
+								l + ", " +
+								a + "<hr>"
+								)
+					}
+				}
+			})
+		})
+		
+		$("#b7").click(function() {
+			$("#result").empty()
+			$.ajax({
+				url: "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frss.hankyung.com%2Ffeed%2Fland.xml&api_key=ci8dphxuvvi5jdkonyrrebbi4ablwjeqvvaqo7xb",
+				success: function(doc) {
+					alert('성공' + doc)
+					list = doc.items
+					alert(list.length)
+					for (var i = 0; i < list.length; i++) {
+						// console.log(list[i].title)
+						t = list[i].title
+						l = list[i].link
+						p = list[i].pubDate
+						a = list[i].author
+						
+						$("#result").append(
+								"<tr>" +
+								"<td>" + "<a href= " + l + ">" + t + "</a>" +  ", " + "</td>" +
+								"<td>" + a + "</td>" +
+								"</tr>"
+						)
+					}
+				}
+			})
+		})
+	})
+</script>
+
+<style>
+	th, td {
+		border-bottom: 1px solid #000;
+		padding: 20px;
+	}
+</style>
+</head>
+<body>
+<button id = "b1">json 받아오기</button>
+<button id = "b2">json 받아오기</button>
+<button id = "b3">한경(연예)</button>
+<button id = "b4">한경(IT)</button>
+<button id = "b5">한경(부동산)</button>
+<button id = "b6">SBS(연예/방송)</button>
+<button id = "b7">한경(부동산)</button>
+<hr>
+<div id = "result">
+	<table id = "result2">
+		
+	</table>
+</div>
+</body>
+</html>
