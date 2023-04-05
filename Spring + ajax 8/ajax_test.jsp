@@ -84,7 +84,7 @@
 			$("#result").empty()
 			$.ajax({
 				crossOrigin: true,
-				url:'http://api.openweathermap.org/data/2.5/weather?q=seoul&lang=kr&appid=16e975aa5fddae0150af8bdd26c5aeb6',
+				url:'http://api.openweathermap.org/data/2.5/weather?q=seoul&lang=kr&appid=',
 				dataType : 'json',
 				success: function(x){
 					console.log(x);
